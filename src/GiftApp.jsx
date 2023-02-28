@@ -16,8 +16,6 @@ export const GiftApp = () => {
             {/* <AddCategory setCategories={ setCategories } /> */}
             <AddCategory onNewCategory={(newCategory) => addCategory(newCategory) } />
 
-            <h2>Eze</h2>
-            
             <ol>
                 {
                     categories?.map((cat) => (
