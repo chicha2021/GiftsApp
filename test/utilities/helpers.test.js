@@ -3,7 +3,6 @@ import { getGifs } from "../../src/utilities/helpers"
 describe('Prueba en getGifs', () => {
     test('Debe esperar un arreglo', async () => {
         const gifts = await getGifs('Naruto');
-
         expect( gifts.length ).toBeGreaterThan(0);
         expect( gifts[0] ).toEqual({
             id : expect.any(String),
