@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 export const GiftCard = ({title, url, id}) => {
     return (
-        <div key={id} className={'card'}>
+        <div key={id} className={'card'} role={'div'}>
             <img src={ url } alt={ title } />
             <p>{ title }</p>
         </div>
