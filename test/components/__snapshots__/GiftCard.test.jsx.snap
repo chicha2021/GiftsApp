@@ -4,6 +4,7 @@ exports[`Prueba en GiftCard Debe matchear con el snapshot 1`] = `
 <div>
   <div
     class="card"
+    role="div"
   >
     <img
       alt="Saitama"

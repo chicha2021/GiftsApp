@@ -12,7 +12,7 @@ export const GiftApp = () => {
 
     return (
         <>
-            <h1>Gift App</h1>
+            <h1 role={"titulo"}>Gift App</h1>
             {/* <AddCategory setCategories={ setCategories } /> */}
             <AddCategory onNewCategory={(newCategory) => addCategory(newCategory) } />
 

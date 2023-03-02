@@ -7,21 +7,21 @@ jest.mock("../../src/hooks/UseFetchGifs")
 
 describe(' Prueba en <GiftGrid /> ', () => {
     const category = "Dragon ball Z"
-    
+
     test('El componente debe devolver el loading, div y category', () => {
-        
+
         useFetchGifs.mockReturnValue({
             images: [],
             loading: true,
         });
 
-        render( <GiftGrid  category={ category } /> )
-        expect( screen.getByText( 'Cargando...' ));
-        expect( screen.getByText( category ));
-        expect( screen.getByRole('div')).toBeTruthy();
+        render(<GiftGrid category={category} />)
+        expect(screen.getByText('Cargando...'));
+        expect(screen.getByText(category));
+        expect(screen.getByRole('div')).toBeTruthy();
     });
-    
-    
+
+
     test('Debe mostrar las img', () => {
         const gifs = [
             {
@@ -41,13 +41,12 @@ describe(' Prueba en <GiftGrid /> ', () => {
             loading: false,
         });
 
-        render( <GiftGrid  category={ category } /> );
-        expect( screen.getAllByRole('img').length ).toBe(2)
-        expect( screen.getAllByRole('div')).toBeTruthy()
-        screen.debug();
+        render(< GiftGrid category={category} />);
+        expect(screen.getAllByRole('img').length).toBe(2)
+        expect(screen.getAllByRole('div')).toBeTruthy()
 
-    })
+    });
 
-}); 
+});
 
 
